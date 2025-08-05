@@ -39,11 +39,12 @@ def solution(players, m, k):
         
         #print(f"t시간대 : {t} -> 이용자 수 :{players[t]}")
         need_server = players[t] // m # 현재 t시간에 필요한 서버 계산
-        #print(f"필요한 서버 : {need_server}")
+        print(f"필요한 서버 : {need_server}")
         
         lack_of_server = need_server - len(running_server)
-        #print(f"부족한 서버 : {lack_of_server}")
-        #print()
+        print(f"부족한 서버 : {lack_of_server}")
+        print()
+        
         if lack_of_server > 0:
             answer += lack_of_server
             for _ in range(lack_of_server):
